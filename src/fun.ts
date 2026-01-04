@@ -1,25 +1,27 @@
-// function greet(name){
-//     console.log('Hello ' + name);
+// const greet = function greet(name: any){
+//     return 'Hello ' + name
 // }
-// greet('John');
+//
+// console.log(greet('John'))
 
-function greet(name: string){
-    return 'Hello ' + name
-}
+
+const greet = (name: any) => 'Hello ' + name
 console.log(greet('John'))
 
 
-function calculateSum(scores: number[]): number {
-    let total: number = 0;
+const multiply = (x: number,y: number) => { return x * y }
+console.log(multiply(5, 10))
 
-    for (let i = 0; i < scores.length; i++) {
-        // @ts-ignore
-        total = total + scores[i];
+
+const getMax = (a: number, b: number): number => {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
     }
-    return total;
 }
 
-let studentScores: number[] = [10, 20, 30];
-
-console.log("ผลรวมคะแนนคือ: " + calculateSum(studentScores));
-
+// ทดลองเรียกใช้ function
+console.log(getMax(50, 20));
+console.log(getMax(7, 12));
+console.log(getMax(100, 100));
