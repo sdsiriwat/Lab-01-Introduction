@@ -1,27 +1,38 @@
-// const greet = function greet(name: any){
-//     return 'Hello ' + name
+// const add = (a:number,b:number) => {
+//     return a+b;
 // }
+// const result = add(1,2) + 0;
+// console.log(result, 'type of result:', typeof result);
+
 //
-// console.log(greet('John'))
+// const add = (a:number,b:number):string => {
+//     return a+b;
+// }
+// const result = add(1,2) + 0;
+// console.log(result, 'type of result:', typeof result);
+//
+// const add = (a:number,b:number):string => {
+//     const result =  a+b;
+//     return result.toString();
+// }
+// const result = add(1,2) + 0;
+// console.log(result, 'type of result:', typeof result);
 
+const findMax = (numbers: number[]): string => {
+    let maxVal = numbers[0];
 
-const greet = (name: any) => 'Hello ' + name
-console.log(greet('John'))
-
-
-const multiply = (x: number,y: number) => { return x * y }
-console.log(multiply(5, 10))
-
-
-const getMax = (a: number, b: number): number => {
-    if (a > b) {
-        return a;
-    } else {
-        return b;
+    for (let i = 1; i < numbers.length; i++) {
+        // @ts-ignore
+        if (numbers[i] > maxVal) {
+            maxVal = numbers[i];
+        }
     }
+    // @ts-ignore
+    return "ค่ามากที่สุดคือ: " + maxVal.toString();
 }
 
-// ทดลองเรียกใช้ function
-console.log(getMax(50, 20));
-console.log(getMax(7, 12));
-console.log(getMax(100, 100));
+let scoresList = [40, 95, 20, 88, 10];
+let resultMax = findMax(scoresList);
+
+console.log(resultMax);
+console.log("Type of result:", typeof resultMax);
