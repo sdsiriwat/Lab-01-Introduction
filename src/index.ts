@@ -1,18 +1,21 @@
-console.log("Hello, TypeScript with Node.js!");
+// let x:number = 11
+// if (x > 10) {
+//     console.log('x is more than 10')
+// }
 
-let x:number | string = 10;
-x = 10;
 
-if (typeof x === 'string') {
-    console.log('x is a string');
-}else if (typeof x === 'number') {
-    console.log('x is a number');
-}else {
-    console.log('x is neither a string nor a number');
+// let x:number = 9
+// if (x > 10) {
+//     console.log('x is more than 10')
+// }else {
+//     console.log('x is less than 10')
+// }
+
+let x: number = 4
+let y: number = 11
+
+if (x > 5 && y > 12) {
+    console.log("ค่ามากจัง");
+} else {
+    console.log((x * y) + (x / y));
 }
-
-
-let i  = 0
-i = 'hello' as any
-console.log(i)
-
